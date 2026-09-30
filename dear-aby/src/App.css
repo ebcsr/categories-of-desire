@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+/* =========================================================
+   DESIGN TOKENS
+   ========================================================= */
+
+:root {
+  --vellum: #f4ebd9;
+  --sandstone: #e5d8c0;
+  --timber: #2a1e17;
+  --brick: #8b261d;
+  --gold: #b08a45;
+  --stone: #62584e;
+
+  --border: rgba(42, 30, 23, 0.16);
+  --border-strong: rgba(42, 30, 23, 0.28);
+
+  --shadow: 0 8px 24px rgba(42, 30, 23, 0.08);
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+
+  background: var(--vellum);
+  color: var(--timber);
+
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: var(--timber);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  line-height: 0.95;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.6rem;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* =========================================================
+   MAIN PAGE
+   ========================================================= */
+
+.min-h-screen {
+  min-height: 100vh;
+  background: var(--vellum);
+}
+
+/* =========================================================
+   MEDIEVAL DIVIDER
+   ========================================================= */
+
+.medieval-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin: 1.5rem 0;
+  color: var(--gold);
+}
+
+.medieval-divider::before,
+.medieval-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--border-strong);
+}
+
+.medieval-divider span {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.1rem;
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.medieval-card {
+  background: rgba(229, 216, 192, 0.65);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+}
+
+.medieval-card:hover {
+  border-color: rgba(176, 138, 69, 0.55);
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.medieval-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+  padding: 0.65rem 1.1rem;
+
+  border: 1px solid var(--brick);
+  border-radius: 4px;
+
+  background: var(--brick);
+  color: #fffaf0;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.medieval-button:hover {
+  background: #722018;
+  border-color: #722018;
+}
+
+.medieval-button:active {
+  transform: translateY(1px);
+}
+
+/* Secondary button */
+
+.medieval-button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+  padding: 0.65rem 1.1rem;
+
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+
+  background: transparent;
+  color: var(--timber);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.medieval-button-secondary:hover {
+  background: var(--sandstone);
+  border-color: var(--gold);
+}
+
+/* =========================================================
+   FORM ELEMENTS
+   ========================================================= */
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 44px;
+
+  padding: 0.65rem 0.8rem;
+
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+
+  background: rgba(255, 250, 239, 0.7);
+  color: var(--timber);
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(98, 88, 78, 0.65);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--brick);
+  box-shadow: 0 0 0 2px rgba(139, 38, 29, 0.1);
+}
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+
+  color: var(--stone);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: var(--brick);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #6f1e17;
+}
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background: rgba(176, 138, 69, 0.35);
+  color: var(--timber);
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
