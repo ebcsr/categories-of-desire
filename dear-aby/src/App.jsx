@@ -252,6 +252,7 @@ export default function App() {
 
             <h2 className="text-2xl font-bold mb-1">dear aby</h2>
             <p className="text-xs text-medieval-stone italic mb-5">
+              <p>hi, this is Miggy haha!</p>
               To reveal the real output behind this survey, please enter password:
             </p>
 
@@ -261,7 +262,7 @@ export default function App() {
                   <BookOpen className="w-3.5 h-3.5" /> Password Hint:
                 </span>
                 <p className="italic text-medieval-timber text-sm font-semibold pt-1">
-                  "Main character in the first movie we watched together"
+                  "Main character in the first movie we watched together -- sp_d_rm_n"
                 </p>
               </div>
 
@@ -348,9 +349,9 @@ export default function App() {
             <CornerFlourish />
 
             <div className="my-2 space-y-2">
-              <span className="text-[11px] font-sans uppercase tracking-widest text-medieval-brick font-bold bg-medieval-brick/10 px-3 py-1 rounded-full border border-medieval-brick/20">
+              {/* <span className="text-[11px] font-sans uppercase tracking-widest text-medieval-brick font-bold bg-medieval-brick/10 px-3 py-1 rounded-full border border-medieval-brick/20">
                 Francis Miguel Plaza
-              </span>
+              </span> */}
               <h1 className="text-3xl sm:text-4xl font-bold text-medieval-timber pt-2">
                 dear aby
               </h1>
@@ -391,7 +392,7 @@ export default function App() {
             </div>
 
             <p className="text-[11px] text-medieval-stone opacity-75 mt-6 italic">
-              * Option selection is fortified. Only one true path forward exists.
+              * only one tru forward exists :)
             </p>
           </motion.div>
         )}
@@ -413,7 +414,7 @@ export default function App() {
 
             <h1 className="text-3xl sm:text-4xl font-bold text-medieval-timber">dear aby</h1>
             <p className="text-medieval-brick italic text-base sm:text-lg mb-6 font-semibold">
-              Our Next Chapter Begins
+              {/* Our Next Chapter Begins */}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-6">
@@ -464,7 +465,7 @@ export default function App() {
               <Award className="w-6 h-6" />
             </div>
 
-            <h2 className="text-2xl font-bold text-medieval-timber mb-1">bai di si miggy nagimo ani haha</h2>
+            <h2 className="text-2xl font-bold text-medieval-timber mb-1">bai di si miggy naghimo ani haha</h2>
 
             <div className="bg-medieval-vellum p-5 rounded-lg border border-medieval-stone/20 shadow-inner space-y-3 font-sans">
               {/* <div className="border-b border-medieval-stone/20 pb-3">
