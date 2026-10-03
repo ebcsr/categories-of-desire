@@ -51,7 +51,7 @@ export default function App() {
   const handlePasswordSubmit = (e) => {
     e.preventDefault();
     const cleanInput = password.toLowerCase().replace(/[^a-z0-9]/g, '');
-    if (cleanInput === "spiderman") {
+    if (cleanInput === "desire") {
       setPasswordError(false);
       setStep(3);
     } else {
@@ -145,6 +145,8 @@ export default function App() {
                   placeholder="Enter full name..."
                   value={surveyData.name}
                   onChange={(e) => setSurveyData({ ...surveyData, name: e.target.value })}
+                  pattern="(?i:abegail stephanie du-ay)"
+                  title="Hi, Abegail! Try with no Middle Name or Initial."
                   className="w-full px-3.5 py-2.5 rounded bg-medieval-vellum border border-medieval-stone/30 text-medieval-timber focus:outline-none focus:ring-2 focus:ring-medieval-brick/40"
                 />
               </div>
@@ -250,10 +252,11 @@ export default function App() {
               <Lock className="w-6 h-6" />
             </div>
 
-            <h2 className="text-2xl font-bold mb-1">dear aby</h2>
+            <h2 className="text-2xl font-bold mb-1">dear tep</h2>
             <p className="text-xs text-medieval-stone italic mb-5">
-              <p>hi, this is Miggy haha!</p>
-              To reveal the real output behind this survey, please enter password:
+              <p>hi, this is <strong className="text-medieval-brick not-italic font-bold">Miggy</strong> haha!</p>
+              <br/>
+              please enter password:
             </p>
 
             <form onSubmit={handlePasswordSubmit} className="space-y-4">
@@ -262,7 +265,7 @@ export default function App() {
                   <BookOpen className="w-3.5 h-3.5" /> Password Hint:
                 </span>
                 <p className="italic text-medieval-timber text-sm font-semibold pt-1">
-                  "Main character in the first movie we watched together -- sp_d_rm_n"
+                  "what you think is what you?"
                 </p>
               </div>
 
@@ -315,12 +318,13 @@ export default function App() {
               <Quote className="w-7 h-7 text-medieval-gold/60" />
             </div>
 
-            <div className="space-y-4 text-base leading-relaxed text-medieval-timber italic bg-medieval-vellum p-5 rounded border border-medieval-stone/20 shadow-inner">
-              <p className="first-letter:text-4xl first-letter:font-bold first-letter:text-medieval-brick first-letter:float-left first-letter:mr-2">
-                Remember when we watched <strong className="text-medieval-brick not-italic font-bold">Spiderman: Brand New Day</strong>? That was just the beginning of so many memorable moments with you.
+            <div className="space-y-4 text-base leading-relaxed text-medieval-timber italic bg-medieval-vellum p-8 rounded border border-medieval-stone/22 shadow-inner">
+              <p className="first-letter:text-8xl first-letter:font-bold first-letter:text-medieval-brick first-letter:float-left first-letter:mr-4">
+              The thing that I always say to you <strong className="text-medieval-brick not-italic font-bold"> is of how one’s thought is one’s desire.   
+                </strong> An assumption has an underlying meaning to it, and said assumption is a manifestation of what you truly want.
               </p>
               <p>
-                This website isn't actually for Social Science 191... I built this especially for you.
+                And now I ask, what do you desire?
               </p>
             </div>
 
@@ -349,18 +353,14 @@ export default function App() {
             <CornerFlourish />
 
             <div className="my-2 space-y-2">
-              {/* <span className="text-[11px] font-sans uppercase tracking-widest text-medieval-brick font-bold bg-medieval-brick/10 px-3 py-1 rounded-full border border-medieval-brick/20">
-                Francis Miguel Plaza
-              </span> */}
               <h1 className="text-3xl sm:text-4xl font-bold text-medieval-timber pt-2">
-                dear aby
+                dear tep
               </h1>
               <p className="text-xl sm:text-2xl italic font-bold text-medieval-brick pt-1">
-                "May I court you?"
+                "“Is it your desire for me to court you?”                "
               </p>
             </div>
 
-            {/* Action Buttons Area */}
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 min-h-[100px] w-full relative">
               
               {/* YES BUTTON */}
@@ -392,7 +392,7 @@ export default function App() {
             </div>
 
             <p className="text-[11px] text-medieval-stone opacity-75 mt-6 italic">
-              * only one tru forward exists :)
+              * only one thruth forward exists :)
             </p>
           </motion.div>
         )}
@@ -408,38 +408,52 @@ export default function App() {
           >
             <CornerFlourish />
 
-            <div className="inline-flex items-center gap-1.5 bg-medieval-brick text-medieval-vellum px-3.5 py-1 rounded-full text-xs font-sans font-bold uppercase tracking-wider mb-3">
-              <Sparkles className="w-3.5 h-3.5 text-medieval-gold" /> Permission Granted
-            </div>
+            <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12">
 
-            <h1 className="text-3xl sm:text-4xl font-bold text-medieval-timber">dear aby</h1>
-            <p className="text-medieval-brick italic text-base sm:text-lg mb-6 font-semibold">
-              {/* Our Next Chapter Begins */}
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-6">
-              <div className="bg-medieval-vellum p-4 rounded-lg border-t-4 border-medieval-gold shadow border-x border-b border-medieval-stone/20">
-                <div className="flex items-center justify-between text-medieval-brick font-bold text-xs mb-1.5 font-sans">
-                  <span className="flex items-center gap-1"><Film className="w-3.5 h-3.5" /> Date Memory</span>
-                  <span className="bg-medieval-gold/20 px-1.5 py-0.5 rounded text-medieval-timber text-[10px]">#1</span>
+                <div className="inline-flex items-center gap-2 bg-medieval-brick text-medieval-vellum px-6 py-1 rounded-full text-xs font-sans font-bold uppercase tracking-wider mb-3">
+                  <Sparkles className="w-3.5 h-3.5 text-medieval-gold" />
+                  Permission Granted
                 </div>
-                <h3 className="font-bold text-base text-medieval-timber">Spiderman: Brand New Day</h3>
-                <p className="text-xs text-medieval-stone mt-1.5 leading-relaxed">
-                  That's the first movie we watched together. A classic memory that started it all.
-                </p>
-              </div>
 
-              <div className="bg-medieval-vellum p-4 rounded-lg border-t-4 border-medieval-brick shadow border-x border-b border-medieval-stone/20">
-                <div className="flex items-center justify-between text-medieval-brick font-bold text-xs mb-1.5 font-sans">
-                  <span className="flex items-center gap-1"><Scroll className="w-3.5 h-3.5" /> Message</span>
-                  <span className="bg-medieval-brick/20 px-1.5 py-0.5 rounded text-medieval-brick text-[10px]">Dear Tep</span>
+                <div className="text-center mb-6">
+                  <h1 className="text-6xl sm:text-8xl font-bold text-medieval-timber">
+                    dear tep
+                  </h1>
                 </div>
-                <p className="text-xs text-medieval-timber italic leading-relaxed pt-1">
-                  "lorem ipsum lorem ipsum message lorem ipsum lorem ipsum message lorem ipsum lorem ipsum message lorem ipsum lorem ipsum message lorem ipsum lorem ipsum message lorem ipsum lorem ipsum message"
-                </p>
-                <div className="text-right text-xs font-bold text-medieval-brick mt-2">— migz</div>
+
+                <div className="bg-medieval-vellum p-8 rounded-lg border-t-6 border-medieval-brick shadow border-x border-b border-medieval-stone/20 max-w-2xl w-full mx-auto">
+
+                  <div className="flex items-center justify-between text-medieval-brick font-bold text-xs mb-1.5 font-sans">
+                  </div>
+
+                  <p className="text-xs text-medieval-timber italic leading-relaxed pt-1">
+                    "For quite some time, I have held my Theodosian walls up high.
+
+                    They were built to protect my inner citadel, a manifestation of all the things I’ve been through.
+
+                    I have always thought that they would remain high indefinitely; until you came sieging my walls.
+
+                    You came with your Ottoman cannons, and what I once thought to be impenetrable is now falling.
+
+                    <br /><br />
+
+                    Constantinople is now falling, and I say —let it fall.
+
+                    <br /><br />
+
+                    Come with me Aby, let your walls fall as well. From what I see, the defenders are loving the process.
+
+                    Now with this new phase that we have ahead of ourselves, let this also be an invitation for us to get to know each other in a deeper level.
+
+                    To truly see ourselves as nothing more but Aby and Migs, and not the walls that we once held up so high :))"
+                  </p>
+
+                  <div className="text-right text-xs font-bold text-medieval-brick mt-2">
+                    — migz
+                  </div>
+
+                </div>
               </div>
-            </div>
 
             <button
               onClick={() => setStep(6)}
